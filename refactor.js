@@ -32,7 +32,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+var doSomethingCool = function(){
+  console.log("Something Cool!");
+}
 
 // -----------------------------------------------
 
@@ -52,6 +54,12 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
+
+setTimeout(function() {
+  alert("Hello, World!")
+}, 2000);
+
+
 
 
 // -----------------------------------------------
@@ -83,6 +91,7 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+// The answer is [c]: z then y
 
 // -----------------------------------------------
 
@@ -105,7 +114,9 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
-
+var reverseStr = function(str) {
+  return str.split("").reverse().join("");
+}
 
 // -----------------------------------------------
 
@@ -157,8 +168,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
-
+var foo;
+foo = "bar";
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -230,8 +241,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  return (numberA + numberB);
+};
 
-
+var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -257,7 +271,13 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+because the original speed value is set to "zero"
 
+var speed = 1;
+var accelerate = function(amount) {
+  speed += amount;
+  return speed;
+};
 
 
 // -----------------------------------------------
