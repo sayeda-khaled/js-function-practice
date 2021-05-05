@@ -144,13 +144,13 @@ function findLongestWord([arr]) {
 
   console.assert(isVowel('b') == false, 'ERROR function isVowel');
 
-  //console.assert(rovarspraket("this is fun") === "tothohisos isos fofunon", 'ERROR function rovarspraket');
+  console.assert(rovarspraket("this is fun") === "tothohisos isos fofunon", 'ERROR function rovarspraket');
 
-  //console.assert(sum([1, 2, 3, 4]) === 10, 'ERROR function sum');
+  console.assert(sum([1, 2, 3, 4]) === 10, 'ERROR function sum');
 
-  //console.assert(multiply([1, 2, 3, 4]) === 24, 'ERROR function multiply');
+  console.assert(multiply([1, 2, 3, 4]) === 24, 'ERROR function multiply');
 
-  //console.assert(reverse('jag testar') === 'ratset gaj', 'ERROR function reverse');
+  console.assert(reverse('jag testar') === 'ratset gaj', 'ERROR function reverse');
 
   console.assert(findLongestWord(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is']) === 6, 'ERROR function findLongestWord');
 
