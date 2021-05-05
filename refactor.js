@@ -271,7 +271,7 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
-because the original speed value is set to "zero"
+//because the original speed value is set to "zero"
 
 var speed = 1;
 var accelerate = function(amount) {
