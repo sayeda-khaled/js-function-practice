@@ -183,15 +183,13 @@ return newString;
 
 
 
-function findLongestWord(str) {
-  let words = str.split(" ");
+function findLongestWord(arr) {
+  // ['apple', 'cheese', 'yellow'];
   let longestWord = 0;
 
-
-
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > longestWord) {
-      longestWord = words[i].length;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestWord) {
+      longestWord = arr[i].length;
     }
   }
 
@@ -265,7 +263,7 @@ return freqList;
 
   console.assert(findLongestWord(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is']) === 6, 'ERROR function findLongestWord');
 
-  console.assert(filterLongeWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'ERROR function filterLongWords');
+  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'ERROR function filterLongWords');
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').a === 7);
 
