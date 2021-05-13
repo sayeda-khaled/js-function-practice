@@ -151,7 +151,13 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
-
+var spanishColor= {
+  "rojo" : "#ff0000",
+  "blanco": "#ffffff",
+  "azul": "#0000ff",
+  "verde": "#00ff00",
+  "negro": "#000000"
+};
 
 // -----------------------------------------------
 
@@ -270,14 +276,17 @@ var accelerate = function(amount) {
   speed += amount;
 };
 
+console.log(speed);
+
 // Put your answer below -------------------------
 //because the original speed value is set to "zero"
 
-var speed = 1;
-var accelerate = function(amount) {
-  speed += amount;
-  return speed;
-};
+//var speed = 0;
+// var accelerate = function(amount) {
+//   speed += amount;
+// } else speed = 1;
+//
+// }
 
 
 // -----------------------------------------------

@@ -14,6 +14,7 @@
    }
 
 
+
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
@@ -47,19 +48,54 @@
   // ---------------------
 
 
-  function rovarspraket(str) {
-    var rest = "";
-    for (let i = 0; i < str.length; i++) {
-    if (str.charAt(i) == 'a'  || str.charAt(i) == 'e'  || str.charAt(i)  == 'i' || str.charAt(i)  == 'o' || str.charAt(i)  == 'u') {
-    rest = rest + "str.chartAt(i)";
-      }
+  // function rovarspraket(str) {
+  //   var rest = "";
+  //   for (let i = 0; i < str.length; i++) {
+  //   if (str.charAt(i) == 'a'  || str.charAt(i) == 'e'  || str.charAt(i)  == 'i' || str.charAt(i)  == 'o' || str.charAt(i)  == 'u') {
+  //   rest = rest + "str.chartAt(i)";
+  //     }
+  //
+  //    else {
+  //       rest = rest + "str.charAt(i)" + 'o' + "str.charAt(i)";
+  //     }
+  //   }
+  //   return rest;
+  // }
+  //
+  // rovarspraket();
+  // console.log(rest);
 
-     else {
-        rest = rest + "str.charAt(i)" + 'o' + "str.charAt(i)";
-      }
+/*
+function rovarspraket(text) {
+  let translation = '';
+
+  text.toLowerCase().split('').forEach(function(char) {
+    if('abcdfghjklmnpqrstvwxyz'.includes(char)){
+      translation += char +'o'+char;
     }
-    return rest;
+    else{
+      translation += char;
+    }
+  });
+  return translation;
+}
+
+*/
+
+
+
+function rovarspraket(text) {
+
+  let textArray = text.toLowerCase().split("");
+
+  for(let i = 0; i < text.length; i++) {
+
+    if('bcdfghjklmnpqrstvwxyz'.includes(textArray[i])) {
+      textArray[i] = textArray[i] + 'o' + textArray[i];
+    }
   }
+  return textArray.join(''); //joining without a space, meaning putting words together
+}
 
 
 
@@ -69,22 +105,53 @@
 
 
 
-  var array = [1, 2, 3, 4, 5]
+  var array = []
    function sum(array) {
      var result = 0;
-     for(let i = 0; i < array; i++){
+     for(let i = 0; i < array.length; i++){
        result += array[i];
      }
      return result;
    }
 
-   function multiply(y) {
+   function multiply(array) {
      var product= 1;
-     for (let i = 0; i < y; i++ ){
-       product *= y[i];
+     for (let i = 0; i < array.length; i++ ){
+       product *= array[i];
      }
      return product;
    }
+
+   //one solutioin
+
+   // function sum(arr) {
+   //   arr.reduce(function(acc, i) {
+   //     return acc + i;
+   //   })};
+
+
+   // function sum(arr) {
+   //   let total = "";
+   //   for(let i= 0; i<arr.length; i++) {
+   //     total += arr[i];
+   //   }
+   //   return total;
+   // }
+
+
+
+   // function multiply(arr) {
+   //
+   //   let total = "";
+   //   for(let i= 0; i<arr.length; i++) {
+   //     total *= arr[i];
+   //   }
+   //   return total;
+   // }
+
+
+
+
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -96,6 +163,19 @@
 
   }
 
+  /* Another way of doing it:
+
+  function reverse(str){
+
+  let newString = '';
+  for (let i = 0, i < str.length; i++) {    //to decrement, set i--
+  newString = str.charAt(i) + newString;
+}
+
+return newString;
+
+  */
+
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
@@ -103,9 +183,10 @@
 
 
 
-function findLongestWord([arr]) {
+function findLongestWord(str) {
+  let words = str.split(" ");
   let longestWord = 0;
-  let words = arr.split(" ");
+
 
 
   for (let i = 0; i < words.length; i++) {
@@ -117,15 +198,45 @@ function findLongestWord([arr]) {
   return longestWord;
 }
 
+
+
+
+
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
 
 
+function filterLongWords(arr, i) {
+
+  return arr.filter(function(word){
+    return word.length > i
+  })
+};
+
+
+
+
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
+
+
+
+
+function charFreq(str) {
+
+  const freqList = {};
+
+  str.split('').forEach(function(char) {  // review this "call back function"-- in the wild, they are annonumous function..
+
+    freqList[char] = freqList[char] + 1 || 1; // we are using [], becuase we are using an object
+  }
+);
+
+return freqList;
+}
 
 
   ////////////////////////////////////////////////////////////////////////
